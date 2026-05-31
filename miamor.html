@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    color:white;
+    font-family:'Segoe UI',sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.container{
+    padding:50px 20px;
+}
+
+h1{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.mensaje{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    font-size:1.1rem;
+    margin-bottom:40px;
+}
+
+video{
+    width:90%;
+    max-width:800px;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(255,255,255,.15);
+}
+
+.carta{
+    max-width:800px;
+    margin:50px auto;
+    line-height:2;
+    font-size:1.15rem;
+    padding:0 20px;
+}
+
+.firma{
+    margin-top:30px;
+    font-size:1.3rem;
+}
+
+.corazon{
+    position:fixed;
+    bottom:-50px;
+    animation:subir 8s linear infinite;
+    color:#ff6fa5;
+    z-index:-1;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
+
+.video-container{
+    max-width:400px;
+    margin:40px auto;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(255,255,255,.15);
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>❤️ Para Ti, Mi Amor ❤️</h1>
+
+<div class="mensaje" style="font-size:40px;">
+Hice esta pequeña página porque quería darte algo hecho por mí.
+Y aunque sé que unas líneas de código no pueden expresar todo lo que siento,
+quería intentarlo. te amo ❤️
+</div>
+
+<div class="video-container">
+<iframe
+width="315"
+height="560"
+src="https://www.youtube.com/embed/-nwmtQeC8Kc"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="carta" style="font-size:40px;">
+
+Mi amor:
+
+Quiero que sepas que te amo muchísimo.
+
+Gracias por llegar a mi vida y por hacer mis días felices.
+Me encanta tu sonrisa, tu forma de ser, cada cosa de ti mi niña,
+tu manera de hacerme sentir querido y todos esos pequeños detalles que te hacen tu mi amor.
+
+Te extraño cada día.
+Extraño hablar contigo, escuchar tu voz y compartir momentos contigo.
+
+A veces pienso en todo lo que hemos vivido y me siento muy afortunado de tenerte, cada cosa que nos pasa tanto bueno como mala.
+
+
+❤️ Te amo mi bebe. ❤️
+
+<div class="firma">
+Con mucho amor,<br>
+tu bebe ❤️
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function crearCorazon(){
+
+    const corazon=document.createElement("div");
+
+    corazon.classList.add("corazon");
+
+    corazon.innerHTML="❤️";
+
+    corazon.style.left=Math.random()*100+"vw";
+
+    corazon.style.fontSize=(Math.random()*20+15)+"px";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(()=>{
+        corazon.remove();
+    },8000);
+}
+
+setInterval(crearCorazon,600);
+
+</script>
+
+</body>
+</html>

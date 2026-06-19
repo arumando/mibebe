@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Ti ❤️</title>
+<title>Felices 2 Años Amor 💙</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -15,153 +14,278 @@
 
 body{
     min-height:100vh;
-    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
-    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    overflow:hidden;
+    background:linear-gradient(to bottom,#081c3a,#102a54,#1b3f7a);
     font-family:'Segoe UI',sans-serif;
-    text-align:center;
-    overflow-x:hidden;
-}
-
-.container{
-    padding:50px 20px;
 }
 
 h1{
-    font-size:2.5rem;
+    color:white;
+    font-size:3rem;
+    text-align:center;
     margin-bottom:20px;
+    text-shadow:0 0 20px rgba(255,255,255,.5);
+    animation:glow 2s infinite alternate;
 }
 
-.mensaje{
+p{
+    color:white;
+    font-size:1.2rem;
+    text-align:center;
+    margin-top:25px;
     max-width:700px;
-    margin:auto;
-    line-height:1.8;
-    font-size:1.1rem;
-    margin-bottom:40px;
-}
-
-video{
-    width:90%;
-    max-width:800px;
-    border-radius:25px;
-    box-shadow:0 0 30px rgba(255,255,255,.15);
-}
-
-.carta{
-    max-width:800px;
-    margin:50px auto;
-    line-height:2;
-    font-size:1.15rem;
     padding:0 20px;
 }
 
-.firma{
-    margin-top:30px;
-    font-size:1.3rem;
-}
-
-.corazon{
-    position:fixed;
-    bottom:-50px;
-    animation:subir 8s linear infinite;
-    color:#ff6fa5;
-    z-index:-1;
-}
-
-@keyframes subir{
+@keyframes glow{
     from{
-        transform:translateY(0);
+        text-shadow:0 0 10px #fff;
+    }
+    to{
+        text-shadow:0 0 30px #60a5fa;
+    }
+}
+
+/* TULIPANES */
+
+.garden{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:35px;
+    margin-top:20px;
+}
+
+.tulip{
+    position:relative;
+    animation:sway 3s ease-in-out infinite alternate;
+}
+
+.tulip:nth-child(2){
+    animation-duration:4s;
+}
+
+.tulip:nth-child(3){
+    animation-duration:3.5s;
+}
+
+.tulip:nth-child(4){
+    animation-duration:4.5s;
+}
+
+.tulip:nth-child(5){
+    animation-duration:3.8s;
+}
+
+.flower{
+    position:relative;
+    width:80px;
+    height:90px;
+}
+
+.petal{
+    position:absolute;
+}
+
+.center{
+    width:40px;
+    height:60px;
+    left:20px;
+    top:8px;
+    background:#60a5fa;
+    border-radius:50% 50% 10px 10px;
+    z-index:2;
+}
+
+.left{
+    width:35px;
+    height:55px;
+    left:5px;
+    top:18px;
+    background:#3b82f6;
+    border-radius:50% 0 50% 50%;
+    transform:rotate(-25deg);
+}
+
+.right{
+    width:35px;
+    height:55px;
+    right:5px;
+    top:18px;
+    background:#2563eb;
+    border-radius:0 50% 50% 50%;
+    transform:rotate(25deg);
+}
+
+.stem{
+    width:8px;
+    height:140px;
+    background:#228B22;
+    margin:auto;
+    border-radius:20px;
+    position:relative;
+}
+
+.stem::before{
+    content:"";
+    position:absolute;
+    width:35px;
+    height:15px;
+    background:#2e8b57;
+    border-radius:50px 0;
+    top:50px;
+    left:-25px;
+    transform:rotate(-30deg);
+}
+
+.stem::after{
+    content:"";
+    position:absolute;
+    width:35px;
+    height:15px;
+    background:#2e8b57;
+    border-radius:0 50px;
+    top:90px;
+    right:-25px;
+    transform:rotate(30deg);
+}
+
+@keyframes sway{
+    from{
+        transform:rotate(-4deg);
+    }
+    to{
+        transform:rotate(4deg);
+    }
+}
+
+/* CORAZONES */
+
+.heart{
+    position:absolute;
+    color:#93c5fd;
+    animation:float linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
         opacity:1;
     }
     to{
-        transform:translateY(-110vh);
+        transform:translateY(-120vh);
         opacity:0;
     }
 }
 
+/* ESTRELLAS */
 
-.video-container{
-    max-width:400px;
-    margin:40px auto;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 30px rgba(255,255,255,.15);
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite;
 }
 
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+    }
+    50%{
+        opacity:1;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<h1>💙 Felices 2 Años Amor 💙</h1>
 
-<h1>❤️ Para Ti, Mi Amor ❤️</h1>
+<div class="garden">
 
-<div class="mensaje" style="font-size:40px;">
-Hice esta pequeña página porque quería darte algo hecho por mí.
-Y aunque sé que unas líneas de código no pueden expresar todo lo que siento,
-quería intentarlo. te amo ❤️
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
+    <div class="tulip">
+        <div class="flower">
+            <div class="petal left"></div>
+            <div class="petal center"></div>
+            <div class="petal right"></div>
+        </div>
+        <div class="stem"></div>
+    </div>
+
 </div>
 
-<div class="video-container">
-<iframe
-width="315"
-height="560"
-src="https://www.youtube.com/embed/-nwmtQeC8Kc"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-</div>
-
-<div class="carta" style="font-size:40px;">
-
-Mi amor:
-
-Quiero que sepas que te amo muchísimo.
-
-Gracias por llegar a mi vida y por hacer mis días felices.
-Me encanta tu sonrisa, tu forma de ser, cada cosa de ti mi niña,
-tu manera de hacerme sentir querido y todos esos pequeños detalles que te hacen tu mi amor.
-
-Te extraño cada día.
-Extraño hablar contigo, escuchar tu voz y compartir momentos contigo.
-
-A veces pienso en todo lo que hemos vivido y me siento muy afortunado de tenerte, cada cosa que nos pasa tanto bueno como mala.
-
-
-❤️ Te amo mi bebe. ❤️
-
-<div class="firma">
-Con mucho amor,<br>
-tu bebe ❤️
-</div>
-
-</div>
-
-</div>
+<p>
+Gracias por estos 2 años llenos de amor, risas y momentos inolvidables.
+Cada día contigo es un regalo y espero que sigamos construyendo recuerdos
+hermosos juntos. Te amo muchísimo. 💙
+</p>
 
 <script>
 
-function crearCorazon(){
-
-    const corazon=document.createElement("div");
-
-    corazon.classList.add("corazon");
-
-    corazon.innerHTML="❤️";
-
-    corazon.style.left=Math.random()*100+"vw";
-
-    corazon.style.fontSize=(Math.random()*20+15)+"px";
-
-    document.body.appendChild(corazon);
-
-    setTimeout(()=>{
-        corazon.remove();
-    },8000);
+// Corazones flotando
+for(let i=0;i<25;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="💙";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*25)+"px";
+    heart.style.animationDuration=(5+Math.random()*6)+"s";
+    document.body.appendChild(heart);
 }
 
-setInterval(crearCorazon,600);
+// Estrellas
+for(let i=0;i<120;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+    star.style.animationDelay=Math.random()*2+"s";
+    document.body.appendChild(star);
+}
 
 </script>
 
